@@ -2,11 +2,11 @@ print("-----BUBBLE SORTING ALGORITHM-----")
 
 numbers = []
 
-insercao = True
-while insercao:
+inserting = True
+while inserting:
     number = int(input("Type a number for the list (type -1 to see the sorted list): "))
     if(number == -1):
-        insercao = False
+        inserting = False
     else:
         numbers.append(number)
 
