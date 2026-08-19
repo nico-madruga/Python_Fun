@@ -1,22 +1,24 @@
-algorithm = [5, 2, 7, 3, 9, 8, 4, 6, 1]
+print("-----BUBBLE SORTING ALGORITHM-----")
 
-index = -1
+numbers = []
 
-while algorithm != sorted(algorithm):
+insercao = True
+while insercao:
+    number = int(input("Type a number for the list (type -1 to see the sorted list): "))
+    if(number == -1):
+        insercao = False
+    else:
+        numbers.append(number)
 
-    index = -1
+swapped = True
 
-    for i in range(len(algorithm) - 1):
-        index += 1
-        current = algorithm[index]
-        next = algorithm[index + 1]
+while swapped:
 
-        if (current > next):
-            algorithm[index], algorithm[index + 1] = algorithm[index + 1], algorithm[index]
+    swapped = False
 
-print(algorithm)
+    for i in range(len(numbers) - 1):
+        if (numbers[i] > numbers[i + 1]):
+            numbers[i], numbers[i + 1] = numbers[i + 1], numbers[i]
+            swapped = True
 
-        
-
-#       if(algorithm[index]) > algorithm[index + 1]:
-#          algorithm[index], algorithm[index + 1] = algorithm[index + 1], algorithm[index]
+print(numbers)
